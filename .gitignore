@@ -4,3 +4,4 @@ node_modules/
 !node_modules/discord.js/typings/index.d.ts
 src/ignore/
 config.json
+.env
