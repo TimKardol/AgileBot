@@ -1,7 +1,7 @@
 dist/
-# node_modules/
-# !node_modules/discord.js/src/client/Client.js
-# !node_modules/discord.js/typings/index.d.ts
+node_modules/
+!node_modules/discord.js/src/client/Client.js
+!node_modules/discord.js/typings/index.d.ts
 src/ignore/
 config.json
 .env
