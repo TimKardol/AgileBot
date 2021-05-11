@@ -1,6 +1,6 @@
 {
   "name": "AgileBot",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A discord bot that annoys you with agile",
   "main": "index.js",
   "repository": {
@@ -17,9 +17,11 @@
   "dependencies": {
     "@types/node": "^14.14.44",
     "@types/ws": "^7.4.2",
+    "cron": "^1.8.2",
     "discord.js": "^12.5.3",
     "dotenv": "^9.0.1",
     "fs": "0.0.1-security",
+    "node-schedule": "^2.0.0",
     "typescript": "^4.2.4"
   },
   "devDependencies": {}

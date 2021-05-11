@@ -1,7 +1,7 @@
-import { Client, Collection } from 'discord.js';
+import { Channel, Client, Collection, Guild } from 'discord.js';
 import fs from 'fs'; // File system
 const { prefix, token, cooldown } = require('../config.json'); // Config file
-
+const schedule = require('node-schedule');
 const client: Client = new Client(); // Initialize client
 // Uses the file system to read the commands folder and filter all the .js files
 const commandFiles = fs.readdirSync('./commands').filter((file: string) => file.endsWith('.js'));
@@ -19,6 +19,10 @@ const cooldowns = new Collection();
 // Wait for the client to be ready
 client.once('ready', () => {
     console.log('Ready!');
+
+    let lunch = schedule.scheduleJob({hour: 12, minute: 0, second: 0, dayOfWeek: [1, 2, 3, 4]}, ()=> {
+        client.channels.cache.get('804705377190019082').send('@everyone, tijd om honger te hebben!');
+    });
 });
 
 // When the client receives a new message
@@ -85,5 +89,7 @@ client.on('message', message => {
         console.error(error);
         message.reply('Error!');
     }
+
+
 });
 
