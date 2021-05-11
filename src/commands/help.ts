@@ -20,7 +20,6 @@ module.exports = {
                 !onsitecustomer | !osc
                 !developer | !dev
                 `}
-
             )
             .setTimestamp()
         message.channel.send(embeddedMessage);
