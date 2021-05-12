@@ -19,8 +19,9 @@ const cooldowns = new Collection();
 // Wait for the client to be ready
 client.once('ready', () => {
     console.log('Ready!');
-
-    let lunch = schedule.scheduleJob({hour: 12, minute: 0, second: 0, dayOfWeek: [1, 2, 3, 4]}, ()=> {
+    
+    let lunch = schedule.scheduleJob({hour: 12, minute: 39, second: 0, dayOfWeek: [1, 2, 3, 4]}, ()=> {
+        // @ts-ignore Is not the correct way of sending a message to a specific channel, this fixes some compiling errors/warning.
         client.channels.cache.get('804705377190019082').send('@everyone, tijd om honger te hebben!');
     });
 });

@@ -1,6 +1,6 @@
 {
   "name": "AgileBot",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A discord bot that annoys you with agile",
   "main": "index.js",
   "repository": {
