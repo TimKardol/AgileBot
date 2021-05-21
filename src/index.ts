@@ -20,8 +20,8 @@ const cooldowns = new Collection();
 client.once('ready', () => {
     console.log('Ready!');
     
-    let lunch = schedule.scheduleJob({hour: 12, minute: 39, second: 0, dayOfWeek: [1, 2, 3, 4], timeZone: 'Europe/Amsterdam'}, ()=> {
-        // @ts-ignore Is not the correct way of sending a message to a specific channel, this fixes some compiling errors/warning.
+    let lunch = schedule.scheduleJob({hour: 12, minute: 0, second: 0, dayOfWeek: [1, 2, 3, 4], timeZone: 'Europe/Amsterdam'}, ()=> {
+        // @ts-ignore This is not the correct way of sending a message to a specific channel, the ignore fixes some compiling errors/warning.
         client.channels.cache.get('804705377190019082').send('@everyone, tijd om honger te hebben!');
     });
 });
