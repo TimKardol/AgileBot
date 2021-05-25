@@ -35,9 +35,9 @@ client.once('ready', () => {
         client.channels.cache.get('804705377190019082').send('@everyone, Stand-down!');
     });
 
-    let working = schedule.scheduleJob({hour: 14, minute: 45, second: 0, dayOfWeek: [2, 3, 4], timeZone: 'Europe/Amsterdam'}, ()=> {
+    let working = schedule.scheduleJob({hour: 15, minute: 0, second: 0, dayOfWeek: [2, 3, 4], timeZone: 'Europe/Amsterdam'}, ()=> {
         // @ts-ignore This is not the correct way of sending a message to a specific channel, the ignore fixes some compiling errors/warning.
-        client.channels.cache.get('804705377190019082').send('@everyone, lekker gewerkt!');
+        client.channels.cache.get('804705377190019082').send('Lekker gewerkt allemaal!');
     });
 });
 
